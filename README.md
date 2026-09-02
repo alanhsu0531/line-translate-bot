@@ -54,9 +54,11 @@
 ### 4. LINE 设置 Webhook URL
 
 回到 LINE Developers → Messaging API → Webhook URL 填入：
+
 ```
 https://line-translate-bot.onrender.com/webhook
 ```
+
 点击 Verify → 显示「Connection successful」即可。
 
 ### 5. UptimeRobot 防止 Render 休眠
@@ -81,6 +83,7 @@ npm run dev
 ```
 
 测试 Webhook 可用 [ngrok](https://ngrok.com/)：
+
 ```bash
 ngrok http 3000
 # 将 ngrok URL + /webhook 填入 LINE Webhook URL
@@ -88,19 +91,19 @@ ngrok http 3000
 
 ## 测试
 
-| 发送内容 | 自动识别语言 | 返回翻译 |
-|---------|------------|---------|
-| `你好` | 中文 → | 印尼文：`Halo` |
-| `Selamat pagi` | 印尼文 → | 中文：`早上好` |
-| `今天天气怎么样` | 中文 → | 印尼文：`Bagaimana cuaca hari ini` |
-| `Terima kasih banyak` | 印尼文 → | 中文：`非常感谢` |
+| 发送内容                | 自动识别语言 | 返回翻译                             |
+| ----------------------- | ------------ | ------------------------------------ |
+| `你好`                | 中文 →      | 印尼文：`Halo`                     |
+| `Selamat pagi`        | 印尼文 →    | 中文：`早上好`                     |
+| `今天天气怎么样`      | 中文 →      | 印尼文：`Bagaimana cuaca hari ini` |
+| `Terima kasih banyak` | 印尼文 →    | 中文：`非常感谢`                   |
 
 ## 费用说明
 
-| 服务 | 费用 |
-|------|------|
-| LINE Messaging API | 免费 |
-| OpenRouter | 极低（每次翻译 < $0.001） |
-| Render Free | 免费 |
-| UptimeRobot Free | 免费 |
-| **总计** | **约等于免费** |
+| 服务               | 费用                      |
+| ------------------ | ------------------------- |
+| LINE Messaging API | 免费                      |
+| OpenRouter         | 极低（每次翻译 < $0.001） |
+| Render Free        | 免费                      |
+| UptimeRobot Free   | 免费                      |
+| **总计**     | **约等于免费**      |
