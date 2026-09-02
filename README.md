@@ -23,7 +23,7 @@
    - **Channel access token**（长期）→ 你的 `CHANNEL_ACCESS_TOKEN`
 5. 关闭「Auto-reply messages」（自动回复消息设为关）
 6. 设置 Webhook URL（部署 Render 后填入）：
-   `https://<你的render域名>/webhook`
+   `https://line-translate-bot-1-dumk.onrender.com/webhook`
 7. 开启「Use webhook」→ 关闭「Greeting messages」
 
 ### 2. OpenRouter 获取 API Key
@@ -88,6 +88,25 @@ npm run dev
 ngrok http 3000
 # 将 ngrok URL + /webhook 填入 LINE Webhook URL
 ```
+
+## 翻译场景
+
+本机器人专为**家人与外劳沟通照顾阿嬤**的日常对话设计，翻译原则：
+
+- **自然亲切** — 使用日常口语，不机械、不生硬
+- **精确明确** — 医疗、看护、饮食等专有名词准确无误
+- **温暖友好** — 带有关怀的语气，像是家人之间的对话
+- **保留专有名词** — 人名、地名、药名、病名、日期、时间、数字、食物名称保留原样
+
+### 温度设置
+
+`OPENROUTER_TEMPERATURE` 控制翻译的自然程度：
+
+| 值 | 效果 | 适用场景 |
+|---|---|---|
+| 0.1–0.3 | 精确稳定 | 医疗看护用药 |
+| 0.3–0.5 | 平衡推荐 | 日常对话 |
+| 0.5–0.8 | 自然灵活 | 闲聊情感 |
 
 ## 测试
 
